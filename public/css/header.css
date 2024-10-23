@@ -1,0 +1,135 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: 1px 1px 5px gray;
+  flex-direction: column;
+}
+
+
+.menu-link{
+  margin-left: 20px;
+}
+
+.menus{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.menus a{
+  text-decoration: none;
+  margin: 0px 10px 0px 10px;
+  font-size: 0.9rem;
+  color: rgb(15, 15, 15);
+  padding: 15px;
+}
+.searchbar{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  width: 350px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+.searchbar i{
+  font-size: 20px;
+  padding: 10px 0px 10px 10px;
+}
+#search-item{
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+}
+.show-item-left{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.show-item-right {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 10px 0px 0px 130px;
+}
+
+.show-item-right.visible {
+  display: grid; /* Ensure grid layout persists when visible */
+  opacity: 1;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: 1fr 1fr; /* Two equal rows */
+  grid-template-columns: repeat(2, 300px);
+  gap: 20px;
+}
+
+.show-item-right h1 {
+  font-size: 15px;
+  padding: 20px 0px 20px 0px;
+  color: tomato;
+}
+
+.show-item-right a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  transition: transform 0.3s ease; 
+}
+
+.show-item-right a:hover{
+  transform: scale(1.05);
+}
+
+
+.show-item-right div {
+  padding: 10px;
+}
+/* 
+#profile i{
+  transition: transform 0.5s ease; 
+}
+#wishlist i{
+  transition: transform 0.5s ease; 
+}
+#shopping-bag i{
+  transition: transform 0.5s ease; 
+} */
+
+@media only screen and (max-width:500px){
+  .navbar{
+    display: block;
+  }
+  .menu-link{
+    margin-left: 0px;
+  }
+  .menus{
+    display: block;
+  }
+  .menus a{
+    display: block;
+    padding: 10px 0px 10px 0px;
+    margin: 0px;
+  }
+
+  .show-item-left{
+    display: block;
+  }
+  .show-item-right{
+    display: none;
+  }
+}
