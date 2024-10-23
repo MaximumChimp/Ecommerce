@@ -16,7 +16,7 @@
         <div class="show-item-left">
             <div class="menus">
                 <div class="logo">
-                    <h1>LOGO</TR></h1>
+                    <img src="/img/wal-o-mart.png" alt="Wal-O-Mart">
                 </div>
                 <div class="menu-link">
                     <a href="" id="men-page">MEN</a>

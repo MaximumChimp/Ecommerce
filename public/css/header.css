@@ -109,6 +109,11 @@ body{
 #shopping-bag i{
   transition: transform 0.5s ease; 
 } */
+ .logo img{
+  width: 100px;
+  height: 100px;
+  object-fit:contain;
+ }
 
 @media only screen and (max-width:500px){
   .navbar{
