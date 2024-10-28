@@ -1,9 +1,27 @@
 $(document).ready(function(){
     $("#men-page").hover(function(){
-        $(".show-item-right").addClass("visible");
+        $("#men-item").addClass("visible");
         
     },function(){
-        $(".show-item-right").removeClass("visible");
+        $("#men-item").removeClass("visible");
+    });
+    $("#woman-page").hover(function(){
+        $("#women-item").addClass("visible");
+        
+    },function(){
+        $("#women-item").removeClass("visible");
+    });
+    $("#kids-page").hover(function(){
+        $("#kids-item").addClass("visible");
+        
+    },function(){
+        $("#kids-item").removeClass("visible");
+    });
+    $("#homeAndLiving-page").hover(function(){
+        $("#homeandliving-item").addClass("visible");
+        
+    },function(){
+        $("#homeandliving-item").removeClass("visible");
     });
     $(".show-item-right").hover(function(){
         $(this).addClass("visible");

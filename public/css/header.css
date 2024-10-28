@@ -1,11 +1,11 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   right: 0;
@@ -13,29 +13,53 @@ body{
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
-  padding: 20px;
   box-shadow: 1px 1px 5px gray;
-  flex-direction: column;
+  flex-direction: column; /* This can remain as is for larger screens */
 }
 
-
-.menu-link{
-  margin-left: 20px;
+.logo {
+  padding: 15px;
+}
+.menu-link {
+  display: flex;
+  gap: 0; /* Ensures no gap between flex items */
 }
 
-.menus{
+.menu-link a {
+  width: 110px; 
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 !important; /* Overrides any existing margins */
+  padding: 15px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: rgb(15, 15, 15);
+}
+
+.menus a:not(.menu-link a) {
+  margin: 0 10px; /* Keep other links' spacing as needed */
+}
+
+.menu-link a:hover {
+  background-color: rgba(124, 124, 124, 0.3);
+  border-radius: 5px;
+}
+
+.menus {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.menus a{
+.menus a {
   text-decoration: none;
   margin: 0px 10px 0px 10px;
   font-size: 0.9rem;
   color: rgb(15, 15, 15);
   padding: 15px;
 }
-.searchbar{
+.searchbar {
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -43,11 +67,11 @@ body{
   background-color: whitesmoke;
   border-radius: 5px;
 }
-.searchbar i{
+.searchbar i {
   font-size: 20px;
   padding: 10px 0px 10px 10px;
 }
-#search-item{
+#search-item {
   padding: 10px;
   width: 100%;
   margin: 0;
@@ -55,7 +79,7 @@ body{
   outline: none;
   background-color: whitesmoke;
 }
-.show-item-left{
+.show-item-left {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -91,50 +115,91 @@ body{
   transition: transform 0.3s ease; 
 }
 
-.show-item-right a:hover{
+.show-item-right a:hover {
   transform: scale(1.05);
 }
-
 
 .show-item-right div {
   padding: 10px;
 }
-/* 
-#profile i{
-  transition: transform 0.5s ease; 
-}
-#wishlist i{
-  transition: transform 0.5s ease; 
-}
-#shopping-bag i{
-  transition: transform 0.5s ease; 
-} */
- .logo img{
+
+.logo img {
   width: 100px;
-  height: 100px;
-  object-fit:contain;
- }
+  height: 30px;
+  object-fit: contain;
+}
 
-@media only screen and (max-width:500px){
-  .navbar{
-    display: block;
-  }
-  .menu-link{
-    margin-left: 0px;
-  }
-  .menus{
-    display: block;
-  }
-  .menus a{
-    display: block;
-    padding: 10px 0px 10px 0px;
-    margin: 0px;
+/* Added Media Queries for Responsiveness */
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically for smaller screens */
   }
 
-  .show-item-left{
-    display: block;
+  .menus {
+    flex-direction: column; /* Stack menu items vertically */
   }
-  .show-item-right{
-    display: none;
+
+  .searchbar {
+    width: 100%; /* Full width for search bar on smaller screens */
+    margin: 10px 0; /* Add margin above and below for spacing */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menu-link {
+    flex-direction: column; /* Stack menu links vertically */
+  }
+
+  .menu-link a {
+    width: 100%; /* Full width for menu links */
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Adjust padding for better touch targets */
+  }
+
+  .menus a {
+    padding: 10px; /* Maintain touch target size */
+    margin: 5px 0; /* Add vertical margin */
+  }
+
+  .show-item-right {
+    padding: 10px 0; /* Remove left padding for better spacing */
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+
+  .navbar {
+    display: block; /* Allow navbar to stack */
+  }
+
+  .menu-link {
+    margin-left: 20px; /* Reset margin */
+  }
+
+  .searchbar{
+    margin-left: 20px;
+  }
+
+  .menus {
+    display: block; /* Stack menu items */
+  }
+
+  .menus a {
+    display: block; /* Stack menu links */
+    padding: 10px 0; /* Adjust padding */
+    margin-left:0px; /* Reset margin */
+    width: 100%; /* Full width for menu links */
+  }
+
+  .menu-item a{
+    margin-left: 20px;
+  }
+  .show-item-left {
+    display: block; /* Allow show-item-left to stack */
+  }
+  
+  .show-item-right {
+    display: none; /* Ensure it remains hidden on small screens */
   }
 }

@@ -22,8 +22,7 @@
                     <a href="" id="men-page">MEN</a>
                     <a href="" id="woman-page">WOMEN</a>
                     <a href="" id="kids-page">KIDS</a>
-                    <a href=""id="homeAndLiving-page">HOME & LIVING</a>
-                    <a href="" id="beauty">BEAUTY</a>       
+                    <a href=""id="homeAndLiving-page">HOME & LIVING</a>     
                 </div>
             </div>
             <div class="menus">
@@ -47,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="show-item-right">
+        <div class="show-item-right" id="men-item">
             <div class="topwear">
                 <h1>Topwear</h1>
                 <a href="">T-Shirts</a>
@@ -81,6 +80,50 @@
                 <a href="">Necklace</a>
                 <a href="">Jackets</a>
                 <a href="">Bags</a>
+            </div>
+        </div>
+
+        <div class="show-item-right" id="women-item">
+            <div class="topwear">
+                <h1>Topwear</h1>
+                <a href="">T-Shirts</a>
+                <a href="">Casual Shirts</a>
+                <a href="">Sweaters</a>
+                <a href="">Jackets</a>
+                <a href="">Hoodies</a>
+                <a href="">Polos</a>
+            </div>
+             
+        </div>
+
+        
+        <div class="show-item-right" id="kids-item">
+            <div class="Bottomwear">
+                <h1>Bottomwear</h1>
+                <a href="">Jeans</a>
+                <a href="">Casual Trousers</a>
+                <a href="">Formal Trousers</a>
+                <a href="">Track pants</a>
+                <a href="">Shorts</a>
+            </div>
+        </div>
+
+        <div class="show-item-right" id="homeandliving-item">
+            <div class="Appliances">
+                <h1>Appliances</h1>
+                <a href="">Jeans</a>
+                <a href="">Casual Trousers</a>
+                <a href="">Formal Trousers</a>
+                <a href="">Track pants</a>
+                <a href="">Shorts</a>
+            </div>
+            <div class="Gadgets">
+                <h1>Gadgets</h1>
+                <a href="">Jeans</a>
+                <a href="">Casual Trousers</a>
+                <a href="">Formal Trousers</a>
+                <a href="">Track pants</a>
+                <a href="">Shorts</a>
             </div>
         </div>
     </div>
